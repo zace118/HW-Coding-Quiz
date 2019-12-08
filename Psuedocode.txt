@@ -1,36 +1,37 @@
 Top row
-    (columns: 2, 9, 1)
-    -Make a link to "View Highscores"
-    -Timer in the top right
-        -Timer decreases with incorrect answers
-        -Score increases with correct answers  
-            -The faster you answer, the higher your score
+    [x](columns: 2, 9, 1)
+    [ ]Make a link to "View Highscores"
+    [x]Timer in the top right
+        [ ]Timer decreases with incorrect answers
+        [ ]Score increases with correct answers  
+            [ ]The faster you answer, the higher your score
+
     Opening page
-        -Title
-        -Short description of the quizzes that are about to happen
+        [ ]Title
+        [ ]Short description of the quizzes that are about to happen
+
     Questions
-        -What are the three main languages of web design?
+        [x]What are the three main languages of web design?
             -Java, CSS, HTML
             -JavaScript, CSS, HTML
             -jQuery, CSS, HTML
             -JavaScript, C+, HMLT
-        -What symbol is used when initializing jQuery?
+        [x]What symbol is used when initializing jQuery?
             -&
             -%
             -$
             -!
-        -What's the correct syntax for creating a function?
+        [x]What's the correct syntax for creating a function?
             -function = myFunction()
             -function myFunction
             -fnct(myFunction())
             -function myFunction()
+
     All Done
         -"Your final score is " + finalScore + "!"
         -input tag to fill in name
         -Button to add name and high score to localStorage
             -Sends you to View Highscores page
-
-
 
 View Highscores
     -List all highscores in chronological order
