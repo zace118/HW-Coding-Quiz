@@ -11,12 +11,13 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <div class="row">
       <div class="col-sm-2">
-        <!-- <span id="highscores-page">View Highscores</span> -->
+        <span id="highscores-page">View Highscores</span>
       </div>
 
       <div class="col-sm-8"></div>
@@ -37,10 +38,11 @@
           <br/>
           <hr class="my-4"/>
           <p class="text-center">
-            It uses utility classes for typography and spacing to space content
-            out within the larger container.
+            Ladies and gentlemen, step right up!!! Test your knowledge!!! Try to answer the following questions before time runs out, but be warned: wrong answers deduct time from your overall timer. 
           </p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          <div class="container text-center">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
+          </div>
         </div>
       </div>
 
@@ -69,7 +71,7 @@
         }, 1000);
       }
 
-      window.onload = function() {
+      window.onclick = function() {
         var oneMinute = 60,
           display = document.querySelector("#time");
         startTimer(oneMinute, display);
