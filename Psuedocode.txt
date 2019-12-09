@@ -7,8 +7,8 @@ Top row
             [ ]The faster you answer, the higher your score
 
     Opening page
-        [ ]Title
-        [ ]Short description of the quizzes that are about to happen
+        [x]Title
+        [x]Short description of the quizzes that are about to happen
 
     Questions
         [x]What are the three main languages of web design?
