@@ -1,4 +1,4 @@
-var questions = [
+let questions = [
     {
         title: "What are the three main languages of web design?",
         choices: ["Java, CSS, HTML", "JavaScript, CSS, HTML", "jQuery, CSS, HTML", "JavaScript, C++, HMLT"],
@@ -8,7 +8,7 @@ var questions = [
         title: "What does HTML stand for?",
         choices: ["Hyper Text Markup Link", "High Tight Module Links", "Hyper Test Machine Learning", "Hype'T Muh Lawd"],
         answer: "Hyper Text Markup Link"
-    },
+    }, 
     {
         title: "What symbol is used when using jQuery?",
         choices: ["&", "&", "$", "!"],
@@ -25,4 +25,5 @@ var questions = [
         answer: "$"
     },
   ];
+  
   
