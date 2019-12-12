@@ -6,32 +6,32 @@ Top row
         [ ]Score increases with correct answers  
             [ ]The faster you answer, the higher your score
 
-    Opening page
-        [x]Title
-        [x]Short description of the quizzes that are about to happen
+Opening page
+    [x]Title
+    [x]Short description of the quizzes that are about to happen
 
-    Questions
-        [x]What are the three main languages of web design?
-            -Java, CSS, HTML
-            -JavaScript, CSS, HTML
-            -jQuery, CSS, HTML
-            -JavaScript, C+, HMLT
-        [x]What symbol is used when initializing jQuery?
-            -&
-            -%
-            -$
-            -!
-        [x]What's the correct syntax for creating a function?
-            -function = myFunction()
-            -function myFunction
-            -fnct(myFunction())
-            -function myFunction()
+Questions
+    [x]What are the three main languages of web design?
+        -Java, CSS, HTML
+        -JavaScript, CSS, HTML
+        -jQuery, CSS, HTML
+        -JavaScript, C+, HMLT
+    [x]What symbol is used when initializing jQuery?
+        -&
+        -%
+        -$
+        -!
+    [x]What's the correct syntax for creating a function?
+        -function = myFunction()
+        -function myFunction
+        -fnct(myFunction())
+        -function myFunction()
 
-    All Done
-        -"Your final score is " + finalScore + "!"
+All Done
+    -"Your final score is " + finalScore + "!"
         -input tag to fill in name
-        -Button to add name and high score to localStorage
-            -Sends you to View Highscores page
+    -Button to add name and high score to localStorage
+        -Sends you to View Highscores page
 
 View Highscores
     -List all highscores in chronological order
