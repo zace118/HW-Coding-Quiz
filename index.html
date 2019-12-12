@@ -32,7 +32,7 @@
 
     <br/>
     <!-- Main page that introduces the quiz  -->
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-sm-3"></div>
       
       <div class="col-sm-6">
@@ -44,25 +44,27 @@
             Ladies and gentlemen, step right up!!! Test your knowledge!!! Try to answer the following questions before time runs out, but be warned: wrong answers deduct time from your overall timer. 
           </p>
           <div class="container text-center">
-                <a class="btn btn-primary btn-lg" href="#" role="button" id="beginQuiz">Start Quiz</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button" id="startQuiz">Start Quiz</a>
           </div>
         </div>
       </div>
       
       <div class="col-sm-3"></div>
-    </div> -->
+    </div>
 
     <!-- Questions page that contains the questions -->
-    <!-- <div class="row">
+    <div class="row">
         <div class="col-sm-3"></div>
   
         <div class="col-sm-6">
           <div class="jumbotron" id="questionsPage">
-            <h1 class="display-4">Coding Quiz</h1>
+            <!-- Where the questions get placed -->
+            <p id="questionSpace"></p>
             <br/>
             <hr class="my-4"/>
             <p id="choices"> 
             </p>
+            <!-- Where the answers get placed -->
             <div class="container text-center">
                   <a class="btn btn-primary btn-lg" href="#" role="button" id="answerA">A. </a>
                   <br/>
@@ -76,37 +78,62 @@
         </div>
   
         <div class="col-sm-3"></div>
-      </div> -->
+      </div>
 
       <!-- This contains the user's score after the quiz -->
-    <!-- <div class="row">
+    <div class="row">
         <div class="col-sm-3"></div>
   
         <div class="col-sm-6">
           <div class="jumbotron" id="userScorePage">
             <h1 class="display-4">Your score is <span id="timeScore"></span></h1>
             <br/>
-            <input type="text" name="" id="highScoreInitials" placeholder="Enter initials">
-            <br>
-            <button id="submitHighScore" class="btn btn-primary mt-2">Submit Score</button>
+            <!-- Row containing text box to enter initials -->
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                <input type="text" name="" id="userScoreInitials" placeholder="Enter initials">
+              </div>
+              <div class="col-sm-4"></div>
+            </div>
+            <br/>
+            <!-- Row containing button to submit score -->
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                  <button id="submitScore" class="btn btn-primary mt-2">Submit Score</button>
+              </div>
+              <div class="col-sm-4"></div>
+            </div>
             </div>
           </div>
         </div>
   
         <div class="col-sm-3"></div>
-      </div> -->
+      </div>
 
       <!-- High scores page that uses local storage -->
       <div class="row">
           <div class="col-sm-3"></div>
     
           <div class="col-sm-6">
-            <div class="jumbotron" id="userScorePage">
+            <div class="jumbotron" id="highScorePage">
               <h1 class="display-4" text= "center">High Scores</h1>
               <br/>
-              <button id="restartQuiz" class="btn btn-primary m-2">Restart Quiz</button>
-              <br>
-              <button id="clearHighScores" class="btn btn-primary m-2">Clear High Scores</button>
+              <!-- Row for the buttons -->
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <!-- Button to restart the quiz -->
+                <div class="col-sm-3">
+                  <button id="restartQuiz" class="btn btn-primary m-2">Restart Quiz</button>
+                </div>
+                <!-- Button to clear the high scores from local storage -->
+                <div class="col-sm-4">
+                  <button id="clearHighScores" class="btn btn-primary m-2">Clear High Scores</button>
+                </div>
+                <div class="col-sm-2"></div>
+              </div>
+              
               </div>
             </div>
           </div>

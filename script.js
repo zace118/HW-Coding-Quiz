@@ -1,3 +1,22 @@
+let startButton = document.getElementById("startQuiz");
+let mainPageEl= document.getElementById("mainPage");
+let questionsPageEl = document.getElementById("questionsPage");
+let userScorePageEl = document.getElementById("userScorePage");
+let highScorePageEl = document.getElementById("highScorePage");
+
+// On click, begins quiz by bringing up "questionsPage"
+startButton.addEventListener("click", beginQuiz);
+
+// Begins quiz by bringing up "questionsPage"
+function beginQuiz() {
+    mainPageEl.setAttribute("class", "hide");
+    userScorePageEl.setAttribute("class", "hide");
+    highScorePageEl.setAttribute("class", "hide");
+}
+
+
+
+
 //Timer
 
 function startTimer(duration, display) {
