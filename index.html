@@ -16,18 +16,19 @@
   </head>
 
   <body>
-    <!-- Top row that contains the timer and the link to the View Highscores page -->
-    <div class="row">
-      <div class="col-sm-2">
-        <span id="highscores-page">View Highscores</span>
-      </div>
-
-      <div class="col-sm-8"></div>
-
-      <div class="col-sm-2">
+    <!-- Header that contains the timer and the link to the View Highscores page -->
+    <div class="row" id="header">
+        <div class="col-sm-3">
+          <span id="highscores-page">View Highscores</span>
+        </div>
+  
+        <div class="col-sm-6"></div>
+      
+        <div class="col-sm-3">
           Timer: <span id="time">01:00</span>
         </div>
     </div>
+      
 
     <br/>
     <!-- Main page that introduces the quiz  -->
@@ -52,93 +53,112 @@
     </div>
 
     <!-- Questions page that contains the questions -->
-    <div class="row">
-        <div class="col-sm-3"></div>
-  
-        <div class="col-sm-6">
-          <div class="jumbotron" id="questionsPage">
-            <!-- Where the questions get placed -->
-            <p id="questionSpace"></p>
-            <br/>
-            <hr class="my-4"/>
-            <p id="choices"> 
-            </p>
-            <!-- Where the answers get placed -->
-            <div class="container text-center">
-                  <a class="btn btn-primary btn-lg" href="#" role="button" id="answerA">A. </a>
-                  <br/>
-                  <a class="btn btn-primary btn-lg" href="#" role="button" id="answerB">B. </a>
-                  <br/>
-                  <a class="btn btn-primary btn-lg" href="#" role="button" id="answerC">C. </a>
-                  <br/>
-                  <a class="btn btn-primary btn-lg" href="#" role="button" id="answerD">D. </a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-sm-3"></div>
-      </div>
-
-      <!-- This contains the user's score after the quiz -->
-    <div class="row">
-        <div class="col-sm-3"></div>
-  
-        <div class="col-sm-6">
-          <div class="jumbotron" id="userScorePage">
-            <h1 class="display-4">Your score is <span id="timeScore"></span></h1>
-            <br/>
-            <!-- Row containing text box to enter initials -->
-            <div class="row">
-              <div class="col-sm-4"></div>
-              <div class="col-sm-4">
-                <input type="text" name="" id="userScoreInitials" placeholder="Enter initials">
-              </div>
-              <div class="col-sm-4"></div>
-            </div>
-            <br/>
-            <!-- Row containing button to submit score -->
-            <div class="row">
-              <div class="col-sm-4"></div>
-              <div class="col-sm-4">
-                  <button id="submitScore" class="btn btn-primary mt-2">Submit Score</button>
-              </div>
-              <div class="col-sm-4"></div>
-            </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-sm-3"></div>
-      </div>
-
-      <!-- High scores page that uses local storage -->
+    <div class="hide" id="questionsPage">
       <div class="row">
+          <div class="col-sm-3"></div>
+      
+          <div class="col-sm-6">
+            <div class="jumbotron" >
+              <!-- Where the questions get placed -->
+              <p id="questionSpace"></p>
+              <br/>
+              <hr class="my-4"/>
+              <p id="choices"> 
+              </p>
+              <!-- Where the answers get placed -->
+              <div class="container text-center">
+                    <a class="btn btn-primary btn-lg" href="#" role="button" id="answerA">A. </a>
+                    <br/>
+                    <br/>
+                    <a class="btn btn-primary btn-lg" href="#" role="button" id="answerB">B. </a>
+                    <br/>
+                    <br/>
+                    <a class="btn btn-primary btn-lg" href="#" role="button" id="answerC">C. </a>
+                    <br/>
+                    <br/>
+                    <a class="btn btn-primary btn-lg" href="#" role="button" id="answerD">D. </a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-sm-3"></div>
+      </div>
+    </div>
+
+    
+
+    <!-- This contains the user's score after the quiz -->
+    <div class="hide" id="userScorePage">
+      <div class="row hide">
           <div class="col-sm-3"></div>
     
           <div class="col-sm-6">
-            <div class="jumbotron" id="highScorePage">
-              <h1 class="display-4" text= "center">High Scores</h1>
+            <div class="jumbotron">
+              <h1 class="display-4">Your score is <span id="timeScore"></span></h1>
+
               <br/>
-              <!-- Row for the buttons -->
+
+              <!-- Row containing text box to enter initials -->
               <div class="row">
-                <div class="col-sm-3"></div>
-                <!-- Button to restart the quiz -->
-                <div class="col-sm-3">
-                  <button id="restartQuiz" class="btn btn-primary m-2">Restart Quiz</button>
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4">                    
+                  <input type="text" name="" id="userScoreInitials" placeholder="Enter initials">
                 </div>
-                <!-- Button to clear the high scores from local storage -->
-                <div class="col-sm-4">
-                  <button id="clearHighScores" class="btn btn-primary m-2">Clear High Scores</button>
-                </div>
-                <div class="col-sm-2"></div>
+
+                <div class="col-sm-4"></div>
               </div>
-              
+
+              <br/>
+
+              <!-- Row containing button to submit score -->
+              <div class="row">
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4">
+                    <button id="submitScore" class="btn btn-primary mt-2">Submit Score</button>
+                </div>
+
+                <div class="col-sm-4"></div>
               </div>
             </div>
           </div>
-    
-          <div class="col-sm-3"></div>
         </div>
+      
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+
+      <!-- High scores page that uses local storage -->
+    <div class="hide" id="highScorePage">
+      <div class="row hide">
+          <div class="col-sm-3"></div>
+          
+          <div class="jumbotron col-sm-6">
+            <h1 class="display-4" text= "center">High Scores</h1>
+            <br/>
+            <!-- Row for the buttons -->
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <!-- Button to restart the quiz -->
+              <div class="col-sm-3">
+                <button id="restartQuiz" class="btn btn-primary m-2">Restart Quiz</button>
+              </div>
+              <!-- Button to clear the high scores from local storage -->
+              <div class="col-sm-4">
+                <button id="clearHighScores" class="btn btn-primary m-2">Clear High Scores</button>
+              </div>
+              <div class="col-sm-2"></div>
+            </div>
+              
+          </div>
+
+          <div class="col-sm-3"></div>
+      </div>
+    </div>
+
+
+      
       
     <script src="script.js"></script>
     <script src="questions.js"></script>

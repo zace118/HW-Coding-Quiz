@@ -1,4 +1,5 @@
 let startButton = document.getElementById("startQuiz");
+let headerEl = document.getElementById("header");
 let mainPageEl= document.getElementById("mainPage");
 let questionsPageEl = document.getElementById("questionsPage");
 let userScorePageEl = document.getElementById("userScorePage");
@@ -10,8 +11,25 @@ startButton.addEventListener("click", beginQuiz);
 // Begins quiz by bringing up "questionsPage"
 function beginQuiz() {
     mainPageEl.setAttribute("class", "hide");
+    questionsPageEl.setAttribute("class", "show");
     userScorePageEl.setAttribute("class", "hide");
     highScorePageEl.setAttribute("class", "hide");
+}
+
+
+
+
+
+
+
+
+
+//View High Scores page
+function HallofFame() {
+    headerEl.setAttribute("class","hide");
+    mainPageEl.setAttribute("class", "hide");
+    questionsPageEl.setAttribute("class", "hide");
+    userScorePageEl.setAttribute("class", "hide");
 }
 
 
