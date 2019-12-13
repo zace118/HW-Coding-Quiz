@@ -1,9 +1,16 @@
+let questionsCount = 0;
+let placeQuestion = document.getElementById("questionSpace");
 let startButton = document.getElementById("startQuiz");
 let headerEl = document.getElementById("header");
 let mainPageEl= document.getElementById("mainPage");
 let questionsPageEl = document.getElementById("questionsPage");
 let userScorePageEl = document.getElementById("userScorePage");
 let highScorePageEl = document.getElementById("highScorePage");
+let answerAEl = document.getElementById("answerA");
+let answerBEl = document.getElementById("answerB");
+let answerCEl = document.getElementById("answerC");
+let answerDEl = document.getElementById("answerD");
+
 
 // On click, begins quiz by bringing up "questionsPage"
 startButton.addEventListener("click", beginQuiz);
@@ -16,7 +23,15 @@ function beginQuiz() {
     highScorePageEl.setAttribute("class", "hide");
 }
 
-
+// Places question text in jumbotron
+function displayQuestions() {
+    let currentQuestion = questions[questionsCount];
+    placeQuestion.textContent = currentQuestion.title;
+    answerAEl.textContent = currentQuestion.choices[0];
+    answerBEl.textContent = currentQuestion.choices[1];
+    answerCEl.textContent = currentQuestion.choices[2];
+    answerDEl.textContent = currentQuestion.choices[3];
+}
 
 
 
