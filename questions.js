@@ -11,7 +11,7 @@ let questions = [
     }, 
     {
         title: "What symbol is used when using jQuery?",
-        choices: ["&", "&", "$", "!"],
+        choices: ["%", "&", "$", "!"],
         answer: "$"
     },
     {

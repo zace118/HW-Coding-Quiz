@@ -3,8 +3,11 @@ Top row
     [ ]Make a link to "View Highscores"
     [x]Timer in the top right
         [ ]Timer decreases with incorrect answers
-        [ ]Score increases with correct answers  
-            [ ]The faster you answer, the higher your score
+        [ ]The faster you answer, the higher your score
+        [ ]When timer reaches zero, take user to view score page
+            if(timer === 0) {
+                ---start function for the user score page---
+            }
 
 Opening page
     [x]Title
@@ -38,4 +41,3 @@ View Highscores
     -Buttons
         -Go back
         -Clear Highscores
-
