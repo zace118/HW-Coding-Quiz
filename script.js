@@ -1,4 +1,5 @@
 let questionsCount = 0;
+let userAnswer = "";
 let placeQuestion = document.getElementById("questionSpace");
 let startButton = document.getElementById("startQuiz");
 let headerEl = document.getElementById("header");
@@ -10,10 +11,38 @@ let answerAEl = document.getElementById("answerA");
 let answerBEl = document.getElementById("answerB");
 let answerCEl = document.getElementById("answerC");
 let answerDEl = document.getElementById("answerD");
+let userScore = document.getElementById("timeScore");
 
 
 // On click, begins quiz by bringing up "questionsPage"
 startButton.addEventListener("click", beginQuiz);
+
+//Answer Buttons
+// answerAEl.addEventListener("click", function(){
+//     userAnswer = this.textContent;
+//     displayQuestions();
+//     this.blur();
+// })
+
+// answersBEl.addEventListener("click", function(){
+//     userAnswer = this.textContent;
+//     displayQuestions();
+//     this.blur();
+// })
+
+// answerCEl.addEventListener("click", function(){
+//     userAnswer = this.textContent;
+//     displayQuestions();
+//     this.blur();
+// })
+
+// answerDEl.addEventListener("click", function(){
+//     userAnswer = this.textContent;
+//     displayQuestions();
+//     this.blur;
+// }
+
+
 
 // Begins quiz by bringing up "questionsPage"
 function beginQuiz() {
@@ -33,21 +62,27 @@ function displayQuestions() {
     answerDEl.textContent = currentQuestion.choices[3];
 }
 
-
-
-
-
-
-
 //View High Scores page
-function HallofFame() {
+function hallOfFame() {
     headerEl.setAttribute("class","hide");
     mainPageEl.setAttribute("class", "hide");
     questionsPageEl.setAttribute("class", "hide");
     userScorePageEl.setAttribute("class", "hide");
 }
 
-
+function checkAnswer() {
+    if (questionsCount === 4){
+        if (questionsCount === 4 && time < 0) {
+            time = 0;
+        }
+        headerEl.setAttribute("class","hide");
+        mainPageEl.setAttribute("class", "hide");
+        questionsPageEl.setAttribute("class", "hide");
+        userScorePageEl.setAttribute("class", "show");
+        timeScoreSpan.textContent = time;
+        
+    }
+}
 
 
 //Timer
@@ -71,8 +106,9 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-window.onclick = function() {
+startQuiz.onclick = function() {
     var oneMinute = 60,
         display = document.querySelector("#time");
     startTimer(oneMinute, display);
+    displayQuestions();
 };
