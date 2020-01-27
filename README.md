@@ -1,3 +1,3 @@
-# HW-Coding-Quiz
+# [HW-Coding-Quiz](https://zace118.github.io/HW-Coding-Quiz/)
 
-Click [here](https://zace118.github.io/HW-Coding-Quiz/) to check it out! 
+![Quiz](/Coding_Quiz.png)
